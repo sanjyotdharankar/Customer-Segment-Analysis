@@ -1,0 +1,73 @@
+{% comment %} <!DOCTYPE html>
+
+<html>
+<head>
+  <title>Model Upload</title>
+</head>
+<body>
+  <h2>Model Upload</h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Submit">
+  </form>
+</body>
+</html> {% endcomment %}
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Model Upload</title>
+  <style>
+    body {
+      background-color: #f1f1f1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      padding: 0;
+      flex-direction: column;
+    }
+  
+    h2 {
+      text-align: center;
+      margin-top: 0;
+    }
+  
+    form {
+      background-color: white;
+      padding: 20px;
+      border-radius: 5px;
+    }
+  
+    input[type="submit"] {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    input[type="text"] {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-weight: bold;
+      width: 100%;
+      box-sizing: border-box;
+      margin-bottom: 10px;
+    }
+  </style>
+  
+</head>
+<body>
+  <h2>Model Upload</h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Submit">
+  </form>
+</body>
+</html>

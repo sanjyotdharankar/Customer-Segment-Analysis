@@ -1,0 +1,140 @@
+{% comment %} <!DOCTYPE html>
+<html>
+<head>
+  <title>Results</title>
+</head>
+<body>
+  <h2>Results</h2>
+  <p>Predictions: {{ predictions }}</p>
+</body>
+</html> {% endcomment %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Results</title>
+  <style>
+    body {
+      background-color: #f1f1f1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      background-color: white;
+      border-radius: 5px;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1, h2 {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    .card {
+      background-color: #f9f9f9;
+      border-radius: 5px;
+      padding: 10px;
+      margin-top: 20px;
+    }
+
+    .card p {
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      margin: 5px 0;
+    }
+
+    blockquote {
+      background-color: #f0f0f0;
+      border-left: 5px solid #ccc;
+      padding: 10px;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      margin-top: 20px;
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    {% if predictions == 0 %}
+    <h1>Predictions: {{ predictions }}  "Budget Shoppers"</h1>
+    <h2>Low-Income Spenders with High Recency</h2>
+    <div class="card">
+      <p>Low to medium income</p>
+      <p>Low to medium expenses</p>
+      <p>Medium to high recency</p>
+      <p>Low total purchases</p>
+      <blockquote>This cluster consists of customers with low to medium income and expenses.<br>
+        They have a medium to high recency, suggesting they make purchases regularly but with lower spending power.<br>
+        Implement cost-effective marketing strategies to attract and retain these price-conscious customers.<br>
+        Offer budget-friendly products or discounts to cater to their affordability.<br>
+        Provide value-added services or rewards for their loyalty.</blockquote>
+    </div>
+    {% elif predictions == 1 %}
+    <h1>Predictions: {{ predictions }}  "Active Consumers"</h1>
+    <h2>Moderate-Income Spenders with High Recency</h2>
+    <div class="card">
+      <p>High income</p>
+      <p>High expenses</p>
+      <p>Medium recency</p>
+      <p>Medium to high total purchases</p>
+      <blockquote>This cluster represents customers with moderate income and expenses.<br>
+        They have a high recency, indicating frequent and recent purchases.<br>
+        Focus on customer retention strategies to keep these customers engaged and loyal.<br>
+        Offer personalized recommendations and tailored promotions based on their past purchases.<br>
+        Provide opportunities for customer feedback and actively listen to their preferences and needs.</blockquote>
+    </div>
+    {% elif predictions == 2 %}
+    <h1>Predictions: {{ predictions }}  "Wealthy Buyers"</h1>
+    <h2>High-Income Spenders with Moderate Recency</h2>
+    <div class="card">
+      <p>High income</p>
+      <p>High expenses</p>
+      <p>Low recency</p>
+      <p>High total purchases</p>
+      <blockquote>This cluster represents customers with high income and high expenses.<br>
+        They have a moderate recency, indicating they have made recent purchases.<br>
+        Focus on offering high-end and luxury products or services to cater to their affluent lifestyle.<br>
+        Implement personalized marketing strategies to engage and retain these customers.<br>
+        Offer loyalty programs or exclusive benefits to encourage repeat purchases and foster brand loyalty.<br>
+        Provide exceptional customer service to enhance their shopping experience.</blockquote>
+    </div>
+    {% elif predictions == 3 %}
+    <h1>Predictions: {{ predictions }}  "Engaged Shoppers"</h1>
+    <h2>Moderate-Income Spenders with Low Recency</h2>
+    <div class="card">
+      <p>High income</p>
+      <p>High expenses</p>
+      <p>Low recency</p>
+      <p>High total purchases</p>
+      <blockquote>This cluster consists of customers with moderate income and expenses.<br>
+        They have a low recency, suggesting they haven't made recent purchases.<br>
+        Develop targeted marketing campaigns to re-engage these customers and encourage them to make repeat purchases.<br>
+        Offer discounts, promotions, or incentives to incentivize them to return and make new purchases.<br>
+        Provide product recommendations based on their past purchases to personalize their shopping experience.</blockquote>
+    </div>
+    {% elif predictions == 4 %}
+    <h1>Predictions: {{ predictions }}  "Occasional Buyers"</h1>
+    <h2>Low-Income Spenders with Low Recency</h2>
+    <div class="card">
+      <p>Low income</p>
+      <p>Low expenses</p>
+      <p>Low to medium recency</p>
+      <p>Low total purchases</p>
+      <blockquote>This cluster represents customers with low income and expenses.<br>
+        They have a low to medium recency, indicating infrequent purchases.<br>
+        Focus on customer acquisition strategies to attract new customers from this segment.<br>
+        Offer entry-level or affordable products to cater to their limited budget.<br>
+        Implement targeted advertising campaigns to raise awareness and increase their engagement.</blockquote>
+    </div>
+    {% endif %}
+  </div>
+</body>
+</html>
