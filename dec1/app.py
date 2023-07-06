@@ -1,5 +1,6 @@
 import streamlit as st
 import requests
+import django
 
 def main():
     st.title("Streamlit Django App")
