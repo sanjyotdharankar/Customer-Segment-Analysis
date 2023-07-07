@@ -1,9 +1,8 @@
 import streamlit as st
 import requests
-import django
 
 def main():
-    st.title("Streamlit Django App")
+    st.title("Customer Segmentation Analysis")
     st.write("Welcome to the Model App!")
 
     # Streamlit form input fields
